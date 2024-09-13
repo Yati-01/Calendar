@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="calender.css">
+    <!-- box icons -->
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="container">
+                <header>
+                    <div class="icons">
+                        <span id="prev"><i class='bx bx-chevron-left'></i></span>
+                    </div>
+                    <p class="current-month"></p>
+                    <div class="icons">
+                        <span id="next"><i class='bx bx-chevron-right'></i></span>
+                    </div>
+
+                </header>
+                <div class="calender">
+                    <ul class="weeks">
+                        <li>SUN</li>
+                        <li>MON</li>
+                        <li>TUE</li>
+                        <li>WED</li>
+                        <li>THU</li>
+                        <li>FRI</li>
+                        <li>SAT</li>
+                    </ul>
+                    <ul class="days" id="days">
+                        <!-- divs for each date using js -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="calenders.js"></script>
+    <!-- <script src="calender.js"></script> -->
+</body>
+
+</html>

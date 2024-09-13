@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    /* background: #25254d; */
+    background: #000000e8;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;   
+    color: white;
+}
+section::before{
+    content: '';
+    position: absolute;
+    /* width: 400px;
+    height: 400px; */
+    /* background: linear-gradient(#ffc107, #e91e63); */
+    background: url(asset/bg.png.png) no-repeat center center;
+    background-size: contain;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    /* border-radius: 50%; */
+    /* transform: translate(-30%, -30%); */
+    z-index: 10;
+}
+ .box{
+    position: relative;
+    z-index: 100;
+} 
+.container{
+    /* display: flex; */
+    background: rgba(255, 255, 255, 0.1 );
+    min-height: 60vh;
+    width: 60vh;
+    border-radius: 10px;
+    box-shadow: 10px 15px 40px rgb(19, 18, 16);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(24px);
+}    
+.container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 30px;
+}
+header .current-month{
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+header .icons span{
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+ 
+}
+header .icons span :hover{
+    background-color:rgb(230, 225, 225);
+    color: black;
+}
+
+.calender ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+    text-align: center;
+
+}
+.calender{
+    padding: 30px;
+}
+.calender .weeks li{
+    font-weight: 500;
+}
+.calender .days  div{
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
+    position: relative;
+}
+.days div.inactive{
+    color: #aaaaaad8;
+}
+.days div.active{
+    color: #fff;
+}
+.calender .days div::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    padding: 0.55rem;
+    height: 100%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+.days div:hover::before{
+    /* color: black;
+    background: #f2f2f2; */
+    background-color: #1110108a;
+}
+.days div.active::before{
+    background: #4140408a;
+}
